@@ -7,5 +7,8 @@
 
 
 
-// DOCUMENT READY FUNCTION BELOW
+// DOCUMENT READY FUNCTION BELOw
 
+$('#shoot').click(function() {
+   $('#userChoice').text($('#input').val()); 
+});
