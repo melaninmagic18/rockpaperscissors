@@ -28,6 +28,48 @@ $('#shoot').click(function() {
     else if (randomNumber <.33333){
         computerChoice = "scissors";
     }
+    
+    
+    if (computerChoice === "rock" && userChoice === "rock") {
+        winner = "Tie";
+    }
+    
+    else if (computerChoice === "paper" && userChoice === "rock") {
+        winner = "computer";
+    }
+    
+    else if (userChoice === "rock" && computerChoice === "scissors") {
+        winner = "computer";
+    }
+    
+    else if (userChoice === "paper" && computerChoice === "rock") {
+        winner ="user";
+    }
+    
+    else if (userChoice === "paper" && computerChoice === "paper") {
+        winner ="Tie";
+    }
+    
+    else if  (userChoice === "paper" && computerChoice === "scissors") {
+        winner="computer";
+    }
+    
+    else if (userChoice ==="scissors" && computerChoice === "rock") {
+        winner="computer";
+    }
+    
+    else if (userChoice === "scissors" && computerChoice === "paper") {
+        winner ="user";
+    }
+    
+    else if (userChoice === "scissors" && computerChoice ==="scissors") {
+        winner= "Tie"; 
+    }
+    
+    
+    $("#result").text(winner);
+    $("#input").text("");
+    $("#computerChoice").text(computerChoice);
 });
  
  var userChoice = "";
